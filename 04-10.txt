@@ -1,0 +1,9 @@
+今天看了《PHP和MySQL.Web开发原书第4版》前面68p
+收货：
+1、register_globals配置参数，以前没有太在意。今天看了，才觉得又有一个更多的了解。
+简短风格：$abc
+中等风格：$_GET['abc']
+冗长风格：$HTTP_GET_VARS['abc']
+据说最后这个冗长的风格后面要禁用了，现在可以通过这个参数禁用：register_long_arrays
+2、超级全局变量，以前只是比较了解$GLOBALS,$_SERVER,$_GET,$_POST,$_COOKIE,$_FILES,$_ENV,$_REQUEST,$_SESSION这些变量里面的几个。
+经常使用的，如$GLOBALS,$_SERVER,$_GET,$_POST,$_COOKIE,$_FILES,$_REQUEST,$_SESSION。但是都不是特别熟悉，只是使用的时候才了解哈，这次看到说$_REQUEST包括$_GET,$_POST和$_COOKIE，没有具体去了解过。下来再看看吧。
