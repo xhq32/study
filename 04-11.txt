@@ -1,0 +1,7 @@
+预读第二章，文件操作部分
+文件操作函数fpoen和fclose
+fwrite和fread
+
+还有字符流处理函数file_put_contents
+相反的函数有file_get_contents
+85p，引出数据库比文件保存更为安全
