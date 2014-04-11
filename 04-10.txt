@@ -7,3 +7,29 @@
 据说最后这个冗长的风格后面要禁用了，现在可以通过这个参数禁用：register_long_arrays
 2、超级全局变量，以前只是比较了解$GLOBALS,$_SERVER,$_GET,$_POST,$_COOKIE,$_FILES,$_ENV,$_REQUEST,$_SESSION这些变量里面的几个。
 经常使用的，如$GLOBALS,$_SERVER,$_GET,$_POST,$_COOKIE,$_FILES,$_REQUEST,$_SESSION。但是都不是特别熟悉，只是使用的时候才了解哈，这次看到说$_REQUEST包括$_GET,$_POST和$_COOKIE，没有具体去了解过。下来再看看吧。
+3、操作符&，在对象形成关联之后，怎么取消关联
+$a=5;
+$b=&$a;
+$a=7;//这个时候，变量$a和$b都是7了
+怎么取消他们的，方法就是unset($b),就可以，现在$b=10
+但是$a还是等于5
+4、参数track_errors开启为on,程序中的错误就不会直接输出，而是保存到变量$php_errormsg中
+5、执行操作符
+`命令行 参数`
+如：$out=`dir c:`;
+echo $out;
+6、函数:gettype()和settype()
+还有检测变量类型的函数：is_array(),is_double(),is_float()等
+还有几个不熟悉的函数：
+is_scalar():检查变量是否是标量，即，一个整数、布尔值、字符串或浮点数
+is_callable():检查变量是否是有效的函数名称
+7、条件分支语句：if-else和switch
+if-else只能执行一个语句段
+而switch可能执行多个语句段
+8、declare控制结构
+declare(directive)
+{
+//block
+}
+指令：ticks,可以设置ticks=n,来控制每隔n行代码运行特定的函数
+
