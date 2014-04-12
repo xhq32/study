@@ -128,3 +128,20 @@ extract()函数，以前看到过，但是从来没有仔细去看过它是做什么，只是大概知道。
 
 extract()函数的后面参数，特别是第2和3个
 可以设置不一样的使用方法
+p106
+
+现在可以学习第四章，字符串
+
+字符串输出函数，printf("Total amount of order is %.2f.",$total);
+
+很少这样使用，其实作用蛮大的。
+
+还有字母大小写转换函数：strtoupper(),strtolower(),ucfirst(),ucwords()
+strtoupper()函数就是把字符串变成大写
+strtolower()正好相反，将字符串变成小写
+ucfirst()函数，顾名思义，就是把字符串的第一个字母变成大写
+ucwords()函数，也是同理，将单词的第一个字母变成大写
+
+字符串格式化函数：addslashes()和stripslashes()
+addslashes()函数，就是把字符串加上转义符
+stripslashes()函数，正好相反，是去除转义符
