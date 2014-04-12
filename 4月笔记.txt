@@ -63,3 +63,7 @@ asort()和ksort()是关联数组排序
 rsort()、arsort()、krsort()
 还有一个自定义排序方式的函数：usort()以前没有注意到呢。
 p96
+
+刚刚添加了一个远程提交，保存本地秘钥，不再提示输入的本地设置
+[redential]
+	helper = store
