@@ -82,3 +82,49 @@ login 用户名
 password 密码了
 测试通过。
 但是这样太危险，密码是暴露的
+
+
+睡一个午觉起来，感觉好多了。
+要不然，下午整个精神不好。
+继续吧
+
+感觉整个usort()函数用来比较数组确实不错，以前都没有了解过呢
+使用方法就是，必须用户自己创建一个函数
+在这个函数里面定义好比较的规则，然后使用usort来调用
+给出一个简单的示例
+function compare($x, $y){
+	if($x[1] == $y[1]){
+		return 0;
+	}else if($x[1]<$y[1]){
+		return -1;
+	}else{
+		return 1;
+	}
+}
+
+调用的时候是这样写的：
+usort($products, 'compare');
+说明，由于usort函数只有一个，没有对应的相反的函数，所以需要反向比较，就要把compare函数再做一个，如reverse_compare
+function reverse_compare($x, $y){
+	if($x[2] == $y[2]){
+		return 0;
+	}else if($x[2] < $y[2]){
+		return 1;
+	}else{
+		return -1;
+	}
+}
+这个写出来的就是按照降序排了
+usort($products, 'reverse_compare');
+
+重复执行某个操作到数组的每个元素的函数array_walk();
+
+统计数组函数
+count(),sizeof(),array_count_values()
+最后一个函数以前没有注意到
+这个函数可以分别统计数组里面的值出现的次数，呵呵，这个功能比较好。
+
+extract()函数，以前看到过，但是从来没有仔细去看过它是做什么，只是大概知道。
+
+extract()函数的后面参数，特别是第2和3个
+可以设置不一样的使用方法
