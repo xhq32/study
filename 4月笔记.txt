@@ -259,7 +259,7 @@ p245
 比较多的资料，数据库优化之类的
 
 p264
-
+4-19
 第十三章 mysql高级编程
 
 学习关于mysql的存储引擎
@@ -387,3 +387,52 @@ end
 delimiter;
 
 p273
+
+4-20
+
+继续存储过程
+
+其中
+repeat
+……
+until done end repeat;
+
+是循环体，只有在循环语句结束时才检查循环条件
+
+类似的循环语句还有
+while condition do
+……
+end while;
+
+还有loop循环语句
+
+loop
+……
+end loop
+这些循环没有内置的循环条件，但是可以通过leave语句退出循环。
+请注意，存储过程不支持for循环。
+存储过程中还有条件语句
+if……then
+还有
+if condition then
+...
+[else]
+...
+end if
+或者
+if condition then 
+...
+[elseif condition then]
+...
+end if
+此外，也可以使用case语句，如下
+case value
+	when value then statement
+	[when value then statement ...]
+	[else statement]
+end case
+
+第三篇 电子商务与安全性
+
+第14章 运营一个电子商务网站
+
