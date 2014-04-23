@@ -454,3 +454,94 @@ p300
 其中，包括常见的服务器安全，代码安全，数据库安全，灾难性快速恢复机制
 
 p322
+
+第17章 使用php和mysql实现身份验证
+
+使用初步的方式，表单验证，服务器访问验证，apache控制验证等方式
+
+p337
+
+
+第18章 使用php和mysql实现安全事务
+
+重点讲解ssl，还有安全加密的其他方式：pgp（商业版）和gpg（免费版）
+
+p346
+
+
+第三篇 php的高级技术
+
+第19章 与文件系统和服务器的交互
+
+介绍php的文件，目录操作函数，还有服务器相关的操作函数
+
+
+p370
+
+
+第20章 使用网络函数和协议函数
+
+parse_url($url)
+邮件操作和ftp
+同时介绍了邮件地址的验证，域名的验证
+gethostbyname()
+gethostbyaddr()
+
+dns_get_mx($emailhost,$mxhostsarr)
+检查是否存在邮件服务器地址
+也可以使用
+checkdnsrr()函数
+
+p385
+
+第21章 日期和时间的管理
+
+php与mysql的时间格式不一致，
+mysql两个关于转化时间的函数
+DATE_FORMAT()
+UNIX_TIMESTAMP()
+
+p396
+
+第22章 创建图像
+
+创建图像的一些操作函数
+
+p417
+
+第23章 在php中使用会话控制
+
+介绍会话的两种方式：
+cookies和session
+
+p429
+
+第24章 其他有用的特性
+
+函数eval
+
+中断执行：die和exit
+序列化变量和对象
+serialize
+unserialize
+暂时改变运行时环境
+ini_set()
+加亮源代码
+show_source()
+highlight_file()
+在命令行中使用php
+
+p435
+
+第五篇 创建实用的php和mysql项目
+
+第25章 在大型项目中使用php和mysql
+
+介绍web项目管理
+开发过程的一些规划和管理
+非常实用，后面再来学习哈
+
+p446
+
+
+
