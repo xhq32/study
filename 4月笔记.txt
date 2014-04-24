@@ -553,5 +553,25 @@ p446
 触发自定义错误
 巧妙地处理错误
 
+set_error_handler();
+function myErrorHandler($errno,$errstr,$errfile,$errline){
+	//处理错误
+}
 
+set_error_handler('myErrorHandler');
+
+
+p462
+
+
+第27章 建立用户身份验证机制和个性化设置
+
+一个完整的小项目
+比较好
+$new_password=get_random_word(6,13);
+
+$rand_number=rand(0,999);
+$new_password.=$rand_number;
+
+p484
 
