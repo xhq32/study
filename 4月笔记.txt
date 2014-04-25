@@ -575,3 +575,38 @@ $new_password.=$rand_number;
 
 p484
 
+4-25
+
+继续学习
+
+其中一个子查询不错，这个也是我的缺陷
+
+先写下来吧
+
+select bm_URL
+from bookmark
+where username in
+(select distinct(b2.username)
+from bookmark b1,bookmark b2
+where b1.usernam='".$valid_user."'
+and b1.username!=b2.username
+and b1.bm_URL=b2.bm_URL)
+and bm_URL not in
+(select bm_URL
+from bookmark
+where username='".$valid_user."')
+group by bm_URL
+having count(bm_URL)>".$popularity;
+
+p493
+
+第28章 创建一个购物车
+
+
+需要的功能：
+在线出售商品的数据库
+一个在线产品目录，按商品种类分类
+一个能记录用户打算购买商品的购物车
+结账脚本，处理付款和运送细节
+一个管理界面
+
