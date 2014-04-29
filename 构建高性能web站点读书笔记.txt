@@ -51,3 +51,50 @@ select * from key_t where key2=123 limit 10;
 
 p260
 
+注意：组合索引（key2，key1）和（key1，key2）是两个完全不一样的
+
+4、使用慢查询分析工具
+
+以下情况，可能导致出现慢查询
+由于时间紧张而忘记了建立索引；
+由于认为基于某些字段的条件查询不会很频繁，所以没有建立索引；
+由于认为短期内记录数不会增长太多，所以没有建立索引；
+由于认为会有其他同事(DBA)来建立索引，所以自己没有做。
+
+最好解决问题的办法：
+A、在数据库访问层进行查询方法的封装；
+B、直接开启数据库自身的慢查询功能，即开启mysql中的慢查询日志
+
+my.cnf
+配置选项
+long_query_time=1
+log-slow-queries=/data/var/mysql_slow.log
+
+查询时间超过1秒的语句会被记录到mysql_slow.log中
+
+也可以开启未使用索引的查询，当然，最好是应用中这种查询比较多才有意义。
+log-queries-not-using-indexes
+
+专门用于查看慢查询日志的工具有两个比较好
+mysqldumpslow
+和
+mysqlsla
+
+比较一下，mysqlsla的统计风格比较清晰
+
+mysqlsla -lt slow /data/var/mysql_slow.log
+
+5、索引缓存
+
+msyqlreport
+报告中可以看到缓存的使用情况
+write hit
+read hit
+分别代表了写缓存的命中率和读缓存的命中率
+
+这个说的索引缓存都是指myisam类数据表的索引，缓存的大小由mysql的key_buffer配置选项来指定
+
+
+p297
+
+
