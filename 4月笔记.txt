@@ -42,3 +42,8 @@ password 密码了
 发现一个新的web站，感觉文章不错
 
 http://www.nowamagic.net/
+
+
+4-30
+在看构建高性能web站点的同时，研究了哈chrome浏览器
+发现里面有一个功能叫着：Audits(翻译成审计)
